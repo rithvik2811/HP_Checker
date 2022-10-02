@@ -18,8 +18,7 @@ u8 capability_struct_addr;
 u32 slot_status_reg_pos;
 u16 slot_status_reg_first_byte;
 
-// Try to figure out which devices have Express Capability Structure and PM Capability Structure.
-// Since SATA SSD is connected maybe the controller is not PCIe.
+// Check if PCIe space is available on server. 
 int pci_config_init(void)
 {	
 	printk(KERN_ALERT "Inside the %s function\n", __FUNCTION__);
@@ -41,7 +40,7 @@ int pci_config_init(void)
 	
 	//pci_read_config_word(dev, slot_status_reg_pos, &slot_status_reg_first_byte);
 	
-	printk(KERN_ALERT "The value obtained from power management is 0x%x\n", capability_struct_addr);	
+	printk(KERN_ALERT "The value obtained from power management is 0x%x\n", capability_struct_addr);
 	return 0;
 }
 

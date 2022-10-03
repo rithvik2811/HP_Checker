@@ -32,7 +32,7 @@ int pci_config_init(void)
 	
 	
 	// Get the address of the PCI EXPRESS CAPABILITY STRUCTURE
-	capability_struct_addr =  pci_find_capability(dev, PCI_CAP_ID_PM);
+	capability_struct_addr =  pci_find_capability(dev, PCI_CAP_ID_EXP);
 	
 	pci_read_config_word(dev, capability_struct_addr, &slot_status_reg_first_byte);
 	

@@ -1,0 +1,1 @@
+cmd_/root/HP_Checker/driver/ret_ext_config.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /root/HP_Checker/driver/ret_ext_config.ko /root/HP_Checker/driver/ret_ext_config.o /root/HP_Checker/driver/ret_ext_config.mod.o
